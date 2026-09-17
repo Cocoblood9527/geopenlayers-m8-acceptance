@@ -207,7 +207,7 @@
       "opacity": 1,
       "source": {
         "type": "remote-cog",
-        "url": "https://raw.githubusercontent.com/Cocoblood9527/geopenlayers-m8-acceptance/main/m8-dem-cog.tif",
+        "url": "https://cdn.jsdelivr.net/gh/Cocoblood9527/geopenlayers-m8-acceptance@45cb1377f2811853d1ddd7cb300f2177e1d0d3a7/m8-dem-cog.tif",
         "attribution": "合成高程 DEM (确定性测试数据)"
       },
       "metadata": {
