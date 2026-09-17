@@ -116,7 +116,7 @@
       "opacity": 1,
       "source": {
         "type": "remote",
-        "url": "https://gist.githubusercontent.com/Cocoblood9527/M8GISTID/raw/m8-remote-snapshot.geojson?version=2"
+        "url": "https://raw.githubusercontent.com/Cocoblood9527/geopenlayers-m8-acceptance/main/m8-remote-snapshot.geojson?version=2"
       },
       "features": [
         {
@@ -207,7 +207,7 @@
       "opacity": 1,
       "source": {
         "type": "remote-cog",
-        "url": "https://gist.githubusercontent.com/Cocoblood9527/M8GISTID/raw/m8-dem-cog.tif",
+        "url": "https://raw.githubusercontent.com/Cocoblood9527/geopenlayers-m8-acceptance/main/m8-dem-cog.tif",
         "attribution": "合成高程 DEM (确定性测试数据)"
       },
       "metadata": {
