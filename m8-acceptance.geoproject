@@ -1,0 +1,277 @@
+{
+  "format": "geopenlayers-project",
+  "schemaVersion": 5,
+  "layers": [
+    {
+      "id": "poi-local",
+      "kind": "geojson",
+      "title": "本地兴趣点",
+      "fileName": "m8-poi-local.geojson",
+      "visible": true,
+      "opacity": 1,
+      "source": {
+        "type": "local"
+      },
+      "features": [
+        {
+          "id": "poi-1",
+          "properties": {
+            "name": "广州塔",
+            "category": "景点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              113.2644,
+              23.1291
+            ]
+          }
+        },
+        {
+          "id": "poi-2",
+          "properties": {
+            "name": "海心沙",
+            "category": "景点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              113.3,
+              23.15
+            ]
+          }
+        },
+        {
+          "id": "poi-3",
+          "properties": {
+            "name": "广州站",
+            "category": "站点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              113.2,
+              23.1
+            ]
+          }
+        },
+        {
+          "id": "poi-4",
+          "properties": {
+            "name": "琶洲站",
+            "category": "站点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              113.35,
+              23.08
+            ]
+          }
+        }
+      ],
+      "style": {
+        "renderer": {
+          "type": "single",
+          "symbol": {
+            "point": {
+              "fillColor": "#56b4ff",
+              "strokeColor": "#ffffff",
+              "radius": 7,
+              "strokeWidth": 2
+            },
+            "line": {
+              "color": "#56b4ff",
+              "width": 3
+            },
+            "polygon": {
+              "fillColor": "#56b4ff",
+              "fillOpacity": 0.24,
+              "strokeColor": "#56b4ff",
+              "strokeWidth": 2
+            }
+          }
+        },
+        "label": {
+          "enabled": false,
+          "field": null,
+          "fontSize": 12,
+          "color": "#1f2937",
+          "haloColor": "#ffffff",
+          "haloWidth": 2,
+          "anchor": "center",
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "poi-remote-snapshot",
+      "kind": "geojson",
+      "title": "远程站点快照",
+      "fileName": "m8-remote-snapshot.geojson",
+      "visible": true,
+      "opacity": 1,
+      "source": {
+        "type": "remote",
+        "url": "https://gist.githubusercontent.com/Cocoblood9527/M8GISTID/raw/m8-remote-snapshot.geojson?version=2"
+      },
+      "features": [
+        {
+          "id": "remote-poi-1",
+          "properties": {
+            "name": "深圳站",
+            "category": "站点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              114.0579,
+              22.5431
+            ]
+          }
+        },
+        {
+          "id": "remote-poi-2",
+          "properties": {
+            "name": "香港西九龙",
+            "category": "站点"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              114.1694,
+              22.3193
+            ]
+          }
+        }
+      ],
+      "style": {
+        "renderer": {
+          "type": "single",
+          "symbol": {
+            "point": {
+              "fillColor": "#56b4ff",
+              "strokeColor": "#ffffff",
+              "radius": 7,
+              "strokeWidth": 2
+            },
+            "line": {
+              "color": "#56b4ff",
+              "width": 3
+            },
+            "polygon": {
+              "fillColor": "#56b4ff",
+              "fillOpacity": 0.24,
+              "strokeColor": "#56b4ff",
+              "strokeWidth": 2
+            }
+          }
+        },
+        "label": {
+          "enabled": false,
+          "field": null,
+          "fontSize": 12,
+          "color": "#1f2937",
+          "haloColor": "#ffffff",
+          "haloWidth": 2,
+          "anchor": "center",
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "tiles-custom",
+      "kind": "xyz",
+      "title": "自定义底图",
+      "visible": true,
+      "opacity": 1,
+      "source": {
+        "type": "remote",
+        "urlTemplate": "https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?version=2",
+        "attribution": "© CARTO © OpenStreetMap contributors",
+        "minZoom": 0,
+        "maxZoom": 18
+      }
+    },
+    {
+      "id": "cog-deflate",
+      "kind": "cog",
+      "title": "合成高程 DEM",
+      "visible": true,
+      "opacity": 1,
+      "source": {
+        "type": "remote-cog",
+        "url": "https://gist.githubusercontent.com/Cocoblood9527/M8GISTID/raw/m8-dem-cog.tif",
+        "attribution": "合成高程 DEM (确定性测试数据)"
+      },
+      "metadata": {
+        "width": 512,
+        "height": 512,
+        "bandCount": 1,
+        "projection": "EPSG:4326",
+        "extent": [
+          113.0,
+          23.0,
+          114.0,
+          24.0
+        ],
+        "bands": [
+          {
+            "index": 1,
+            "name": null,
+            "noData": -9999,
+            "statistics": {
+              "min": 0,
+              "max": 1149.2,
+              "mean": 500,
+              "stddev": 300
+            }
+          }
+        ]
+      },
+      "style": {
+        "type": "single-band",
+        "band": 1,
+        "colorRamp": "viridis",
+        "range": {
+          "min": 0,
+          "max": 1400
+        }
+      }
+    },
+    {
+      "id": "osm-standard",
+      "kind": "xyz",
+      "title": "OpenStreetMap Standard",
+      "visible": true,
+      "opacity": 1,
+      "source": {
+        "type": "preset",
+        "presetId": "osm-standard"
+      }
+    }
+  ],
+  "selectedLayerId": "poi-local",
+  "view": {
+    "center": [
+      113.2644,
+      23.1291
+    ],
+    "zoom": 11,
+    "bearing": 0,
+    "pitch": 0
+  },
+  "legendVisible": true,
+  "namedQueries": [
+    {
+      "name": "景点清单",
+      "sql": "SELECT name, category, geometry FROM poi_local WHERE category = '景点'"
+    }
+  ]
+}
